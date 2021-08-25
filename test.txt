@@ -1,0 +1,9 @@
+take two git repos (repoA, repoB)
+
+make commit 1 to repoA and push the code
+now push the same commit1 to repoB from same git folder
+
+
+
+
+this is testing...
