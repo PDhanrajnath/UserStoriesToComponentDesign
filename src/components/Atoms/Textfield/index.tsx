@@ -1,7 +1,7 @@
 import React from "react";
 
-const BookPage = () => {
+const Textfield = () => {
   return <div></div>;
 };
 
-export default BookPage;
+export default Textfield;
