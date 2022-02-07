@@ -2,19 +2,15 @@ import React from "react";
 import { Icon as MuiIcon } from "@material-ui/core";
 
 export type iconProps = {
-  name?: string;
+  icon?: any;
   className?: string;
   onClick?: () => void;
+  id?: string;
 };
 
 const Icon = (props: iconProps) => {
-  const { name, className, onClick } = props;
-  return (
-    <MuiIcon className={className} onClick={onClick}>
-      {/* based on name we can render particular icon from material-ui? */}
-      {name}
-    </MuiIcon>
-  );
+  const { icon, className, onClick } = props;
+  return <MuiIcon className={className} children={icon} onClick={onClick} />;
 };
 
 export default Icon;

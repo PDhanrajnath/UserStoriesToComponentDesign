@@ -1,6 +1,8 @@
 import { Grid } from "@material-ui/core";
 import React from "react";
 import Typography from "../../Atoms/Typography";
+import secondaryTabs from "../../Molecules/secondaryTabs";
+import SetUpKindlePopup from "../../Molecules/SetUpKindlePopup";
 
 export type BookDetailsProps = {
   Button?: JSX.Element;
@@ -12,7 +14,9 @@ const BookDetails = (props: BookDetailsProps) => {
   const { Button, ButtonIcon, IconTypography } = props;
   const handleReadnow = () => {};
   const handleBuyBook = () => {};
-  const handleSendToKindle = () => {};
+  const handleSendToKindle = () => {
+    <SetUpKindlePopup open={true} />;
+  };
   const handleTabsUnderBookDetail = () => {};
 
   return (
@@ -34,6 +38,8 @@ const BookDetails = (props: BookDetailsProps) => {
           {Button}
           {/* Handle popup molecule for sen to Kindle button */}
         </Grid>
+        {/* inner tabs i.e., synopsis, who is it for, about the author  */}
+        <Grid item>{secondaryTabs}</Grid>
         <Grid>{/* Book image */}</Grid>
       </Grid>
     </div>

@@ -1,6 +1,5 @@
-import { Card, CardContent, CardHeader, Icon } from "@material-ui/core";
+import { Card, CardContent, CardHeader, Grid, Icon } from "@material-ui/core";
 import React from "react";
-import CardIcons from "../../Atoms/CardIcons";
 import Typography from "../../Atoms/Typography";
 
 export type bookListProps = {
@@ -14,16 +13,21 @@ export type bookListProps = {
 const BookList = (props: bookListProps) => {
   const { img, name, body, icon, number } = props;
   return (
-    <Card elevation={0}>
-      <CardHeader avatar={<img src={img} alt={name} />} />
-      <CardContent>
+    <Grid container>
+      <Grid item>
+        <img src={img} alt={name} />
+      </Grid>
+      <Grid item>
         <Typography children={name} variant="body1" />
+      </Grid>
+      <Grid item>
         <Typography children={body} variant="inherit" />
-        <CardIcons id={name} name={name} />
+      </Grid>
+      <Grid item>
         <Typography children={number} variant="caption" />
         <Icon children={icon} />
-      </CardContent>
-    </Card>
+      </Grid>
+    </Grid>
   );
 };
 
